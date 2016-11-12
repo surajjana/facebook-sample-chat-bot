@@ -13,7 +13,7 @@ const app = express()
 var MongoClient = require('mongodb').MongoClient
 var ObjectId = require('mongodb').ObjectID
 
-var url = 'mongodb://35.161.7.98:27017/mcabmsit'
+var url = 'mongodb://'
 
 app.set('port', (process.env.PORT || 5001))
 
@@ -61,7 +61,7 @@ app.post('/webhook/', function (req, res) {
 
 // recommended to inject access tokens as environmental variables, e.g.
 // const token = process.env.FB_PAGE_ACCESS_TOKEN
-const token = "EAAYxJhMaxzgBAOZAqdUfFz9mbzZA8L4UBlvF9Cyty3mbxkaWHiWzsc6TnrdTmw3J2AZCGXKDZBicJ5TgJ5dyCUaxROYKOOB0UX8ZBmhjTdWlZBIT90yApGNIHlBhk90kYxAT5FL1I9fE2vsqKAZCVGyqkxs7G8AynJgw8rSHhSZCnwZDZD"
+const token = ""
 
 function authUser(sender, event){
 	MongoClient.connect(url, function(err, db) {
